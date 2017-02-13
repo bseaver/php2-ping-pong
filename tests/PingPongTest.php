@@ -8,8 +8,8 @@
         function test_calculateExceptions_n1()
         {
             //Arrange
-            $test_expections = array(array(3, 'Ping'), array(5, 'Pong'), array(15, 'Ping-Pong'));
-            $test_PingPong = new PingPong($test_expections);
+            $test_exceptions = array(array(3, 'Ping'), array(5, 'Pong'), array(15, 'Ping-Pong'));
+            $test_PingPong = new PingPong($test_exceptions);
             $input = 1;
 
             //Act
@@ -19,18 +19,22 @@
             $this->assertEquals(1, $result);
         }
 
-        function test_calculateExceptions_n3()
+        function test_calculateExceptions_exception_list()
         {
             //Arrange
-            $test_expections = array(array(3, 'Ping'), array(5, 'Pong'), array(15, 'Ping-Pong'));
-            $test_PingPong = new PingPong($test_expections);
-            $input = 3;
+            $test_exceptions = array(array(3, 'Ping'), array(5, 'Pong'), array(15, 'Ping-Pong'));
+            $test_PingPong = new PingPong($test_exceptions);
 
-            //Act
-            $result = $test_PingPong->calculateException($input);
+            foreach ($test_exceptions as $exception) {
+                //Arrange
+                $expecting = $exception[1];
 
-            //Assert
-            $this->assertEquals('Ping', $result);
+                //Act
+                $result = $test_PingPong->calculateException($exception[0]);
+
+                //Assert
+                $this->assertEquals($expecting, $result);
+            }
         }
     }
 
