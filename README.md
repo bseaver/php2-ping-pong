@@ -39,10 +39,9 @@ This project demonstrates building an app using PHPUnit, Silex and Twig framewor
 * MIT
 
 ## Specifications
-* Phase 1 - Dependencies and .gitignore
-* Phase 2 - Initial Silex framework with "Hello" on home page
-* Phase 3 - PingPong class: exceptions property and empty constructor, setter and calculateException() methods.
-* Phase 4 - Build Test cases and implement PingPong methods
+* Phase 1 - Dependencies and .gitignore. 
+* Phase 2 - PingPong class: exceptions property and empty constructor, setter and calculateException() methods.
+* Phase 3 - Build Test cases and implement PingPong methods
 * Assumption: Exception list is [[3,"Ping"], [5,"Pong"], [15, Ping-pong]]
 
 | Behavior - What does calculateException() return? | Input    | Output     |
@@ -52,6 +51,7 @@ This project demonstrates building an app using PHPUnit, Silex and Twig framewor
 | A number divisible by 5                             | 5     | Pong  |
 | A number divisible by 3 and 5                       | 15    | Ping-pong |
 
+* Phase 4 - Initial Silex framework with "Hello" on home page
 * Phase 5- Output twig template with a a form that accepts a number.
 * Phase 6- Output a list showing the numbers and exceptions.
 * Phase 7 - Allow user to change the exception list.
