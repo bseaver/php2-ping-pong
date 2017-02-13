@@ -3,19 +3,19 @@
     {
         private $exceptions;
 
-        function __construct()
+        function __construct($new_exceptions)
         {
-
+            $this->setExceptions($new_exceptions);
         }
 
-        function setExceptions()
+        function setExceptions($new_exceptions)
         {
-
+            $this->exceptions = $new_exceptions;
         }
 
-        function calculateException()
+        function calculateException($input_number)
         {
-
+            return $input_number;
         }
     }
 ?>
