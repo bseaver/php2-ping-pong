@@ -15,7 +15,13 @@
 
         function calculateException($input_number)
         {
-            return $input_number;
+            $output = $input_number;
+            foreach ($this->exceptions as $exception) {
+                if($input_number % $exception[0] == 0){
+                    $output = $exception[1];
+                }
+            }
+            return $output;
         }
     }
 ?>
